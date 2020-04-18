@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Coffee Machine</title>
+  </head>
+  <body>
+    <div class="content">
+      <div class="content-opt">
+        <h3># Escolha sua opção</h3>
+        <button class="btn-opt" onclick="buy(1)">Cappuccino <br/>R$ 3,50</button>
+        <button class="btn-opt" onclick="buy(2)">Mocha <br/>R$ 4,00</button>
+        <button class="btn-opt" onclick="buy(3)">Café com leite <br/>R$ 3,00</button>
+      </div>
+      <div class="art">
+        <div class="art__header">
+          <h1>Café</h1>
+          <h3>Brasileiro</h3>   
+        </div>
+        <div class="art__bottom"></div>
+          <div class="container">
+            <div class="display-credit">
+              <span id="credit"></span>
+            </div>
+            <div class="coffee-header">
+              <div class="coffee-header__buttons coffee-header__button-one"></div>
+              <div class="coffee-header__buttons coffee-header__button-two"></div>
+              <div class="coffee-header__display"></div>
+              <div class="coffee-header__details"></div>
+            </div>
+            <div class="coffee-medium">
+              <div class="coffee-animation"></div>
+              <div class="coffe-medium__exit"></div>
+              <div class="coffee-medium__arm"></div>
+              <div class="coffee-medium__cup"></div>   
+            </div>
+            <div class="coffee-footer"></div>
+            
+          </div>
+          <div class="social">
+            <h3># Veja mais em</h3>
+            <a class="social__link" target="_blank" href="https://www.linkedin.com/in/thiago-luis-nunes-25b657121/"><i data-feather="linkedin"></i></a>
+            <a class="social__link" target="_blank" href="https://github.com/thiago-luno"><i data-feather="github"></i></a>
+          </div>
+      </div>
+      <div class="content-opt-credit">
+        <h3># Inserir crédito</h3>
+        <button class="btn-credit" onclick="addCredit(0.01)">R$ 0,01</button>
+        <button class="btn-credit" onclick="addCredit(0.05)">R$ 0,05</button>
+        <button class="btn-credit" onclick="addCredit(0.10)">R$ 0,10</button>
+        <button class="btn-credit" onclick="addCredit(0.25)">R$ 0,25</button>
+        <button class="btn-credit" onclick="addCredit(0.50)">R$ 0,50</button>
+        <button class="btn-credit" onclick="addCredit(1.00)">R$ 1,00</button>
+      </div>
+    </div>
+   
+    <div class="content">
+   
+    </div>
+
+    <script src="coffee.js"></script>
+    <script>
+      feather.replace()
+    </script>
+  </body>
+</html>
