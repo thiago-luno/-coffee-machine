@@ -6,13 +6,14 @@ function getCredit() {
   return credit.toFixed(2);
 }
 
-function change() {
+function change(order) {
   if(getCredit() > 0) {
-    alert(`Seu troco é de R$${getCredit()}`)
-    credit = 0.00;
-    updateCreditView();
-
+    alert(`Seu pedido foi ${order}. Seu troco é de R$${getCredit()}`)
+  } else {
+    alert(`Seu pedido foi ${order}. Não há troco`)
   }
+  credit = 0.00;
+  updateCreditView();
 }
 
 function updateCreditView() {
@@ -32,8 +33,7 @@ function error() {
   alert(`Você não possui crédito suficiente. Crédito atual: R$${getCredit()}`)
 }
 
-function buy(opt) {
-
+function buy(opt, evt) {
   switch (opt) {
     case 1:
       if (credit < 3.50)
@@ -55,15 +55,14 @@ function buy(opt) {
 
       credit -= 3.00;
       break;
-
   }
+
   fillCup();
   updateCreditView();
-  change();
+  change(evt.target.innerText);
 }
 
 function fillCup() {
-
   const element = document.querySelector(".coffee-medium");
 
   let container = document.querySelector(".coffee-animation");
@@ -86,5 +85,4 @@ function fillCup() {
   container.appendChild(smokeFor);
 
   element.appendChild(container);
-
 }
